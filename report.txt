@@ -1,0 +1,49 @@
+Report: Implementing a Dynamic Knowledge Base Expansion System for a Chatbot
+
+Introduction
+
+The goal of this project is to design and implement a system that enables a chatbot to dynamically expand its knowledge base by periodically updating its vector database with new information from specified sources. This will allow the chatbot to incorporate new information into its responses over time, improving its accuracy and relevance.
+
+System Design
+
+Here I have implemented 2 methods for updating:
+  1- You can upload your own csv file in new_data and it will be updated in the vector database after running  the function
+  2- This is seconda method to update using API(optional)
+  
+The system consists of the following components:
+
+Vector Database: A database that stores the chatbot's knowledge base in the form of vectors, which are numerical representations of text data.
+Data Sources: Specified sources of new information, such as news articles, research papers, or social media feeds.
+Data Ingestion Module: A module responsible for collecting new data from the specified sources and processing it into a format suitable for updating the vector database.
+Vector Database Update Module: A module that updates the vector database with the new data, using techniques such as incremental learning or online learning.
+Chatbot Interface: The interface through which users interact with the chatbot, which uses the updated vector database to generate responses.
+Implementation
+
+The system is implemented using the following technologies:
+
+Langchain: A Python library for building conversational AI models, which provides a simple and efficient way to work with vector databases.
+FAISS: A library for efficient similarity search and clustering of dense vectors, which is used to update the vector database.
+Hugging Face Transformers: A library of pre-trained models for natural language processing tasks, which is used to process new data into a format suitable for updating the vector database.
+The implementation involves the following steps:
+
+Data Ingestion: The data ingestion module collects new data from the specified sources and processes it into a format suitable for updating the vector database. This involves tokenizing the text data, removing stop words, and converting the text into numerical vectors using a pre-trained language model.
+Vector Database Update: The vector database update module updates the vector database with the new data, using techniques such as incremental learning or online learning. This involves adding the new vectors to the database and updating the index to reflect the new data.
+Chatbot Interface: The chatbot interface uses the updated vector database to generate responses to user queries. This involves searching the database for similar vectors to the user's query and generating a response based on the most similar vectors.
+Periodic Updates
+
+To ensure that the chatbot's knowledge base remains up-to-date, the system is designed to periodically update the vector database with new information from the specified sources. This is achieved using a scheduling library, such as schedule, which runs the data ingestion and vector database update modules at regular intervals (e.g., every 6 hours).
+
+Expected Outcome
+
+The expected outcome of this project is a chatbot that can automatically incorporate new information into its responses over time, improving its accuracy and relevance. The chatbot will be able to learn from new data and adapt to changing information, making it a more effective and engaging conversational AI model.
+
+Benefits
+
+The benefits of this project include:
+
+Improved Accuracy: The chatbot's knowledge base will be updated regularly, ensuring that its responses are accurate and relevant.
+Increased Relevance: The chatbot will be able to learn from new data and adapt to changing information, making its responses more relevant to users.
+Enhanced User Experience: The chatbot's ability to incorporate new information into its responses will improve the user experience, making it a more effective and engaging conversational AI model.
+Conclusion
+
+In conclusion, the system designed and implemented in this project enables a chatbot to dynamically expand its knowledge base by periodically updating its vector database with new information from specified sources. The expected outcome is a chatbot that can automatically incorporate new information into its responses over time, improving its accuracy and relevance. The benefits of this project include improved accuracy, increased relevance, and an enhanced user experience.
